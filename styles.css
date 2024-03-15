@@ -1,0 +1,805 @@
+/* Global styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  height: 100dvh;
+}
+.teal_line {
+  margin: auto;
+  width: 100px;
+  height: 5px;
+
+  margin-bottom: 50px;
+  background-color: teal;
+  border-radius: 20px;
+}
+.alice_line {
+  margin: auto;
+  width: 100px;
+  height: 5px;
+
+  margin-bottom: 50px;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+.left_alice_line {
+  width: 70px;
+  height: 5px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  background-color: rgba(0, 250, 250, 0.7);
+  border-radius: 20px;
+}
+/* Header styling */
+.header {
+  width: 100%;
+  height: 15dvh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 58, 58);
+  z-index: 10;
+  opacity: 0.6;
+}
+.header-logo {
+  font-size: 80px;
+  float: left;
+  margin-left: 50px;
+  color: aliceblue;
+}
+.header-logo i {
+  margin-left: 25px;
+}
+.navbar-list {
+  float: right;
+  margin-right: 100px;
+  color: aliceblue;
+  font-weight: bold;
+  margin-top: 3%;
+}
+.navbar-list li {
+  display: inline-block;
+  margin-left: 25px;
+  padding-bottom: 5px;
+
+  transition: border 0.2s ease;
+}
+.navbar-list li:hover {
+  border-bottom: 5px solid teal;
+  border-radius: 4%;
+}
+
+.navbar-list li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.navbar-blog-item {
+  position: relative;
+  display: block;
+}
+.blog-a {
+  color: aliceblue;
+  display: block;
+  padding: 10px;
+}
+.blog-tab {
+  position: absolute;
+  width: fit;
+  padding: 5px;
+  background-color: teal;
+  border: 1px solid aliceblue;
+  border-radius: 10px;
+  text-align: center;
+  left: 80%;
+  bottom: -40%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.navbar-blog-item:hover + .blog-tab {
+  visibility: visible;
+  opacity: 1;
+}
+/* Hero-section Styling */
+.hero-section {
+  width: 100%;
+  height: 100dvh;
+  font-size: 30px;
+  background-image: url(imgs/bg-hero.jpeg);
+  background-size: cover;
+  position: relative;
+}
+.hero-section-overlay {
+  background-color: rgba(0, 100, 100, 0.8);
+
+  width: 100%;
+  height: 100%;
+}
+.hero-section-content {
+  text-align: center;
+  color: aliceblue;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-section-btn-light {
+  padding: 20px;
+  font-size: 20px;
+  margin: 40px 10px;
+  border: none;
+  border-radius: 10px;
+  color: teal;
+  font-weight: bold;
+  cursor: pointer;
+}
+.hero-section-btn-dark {
+  color: aliceblue;
+  background-color: teal;
+}
+/* Welcome to website section */
+.welcome-container {
+  height: auto;
+  width: 80%;
+  margin: auto;
+  background: white;
+  text-align: center;
+}
+
+.welcome-title {
+  margin-top: 20px;
+  padding: 10px;
+  transition: color 0.5s;
+  color: rgb(0, 58, 58);
+}
+
+.welcome-content {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.welcome-card i {
+  font-size: 50px;
+}
+.welcome-card a {
+  text-decoration: none;
+  font-weight: bold;
+  color: teal;
+}
+.welcome-card {
+  width: 30%;
+  height: 200px;
+  padding: 15px 18px;
+  line-height: 30px;
+  float: left;
+  border: 2px solid rgb(49, 49, 49);
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  color: rgb(0, 58, 58);
+  z-index: 10;
+}
+.welcome-middle-card {
+  margin: 0 5%;
+}
+.welcome-card p {
+  color: rgb(49, 49, 49);
+}
+
+.welcome-card:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 58, 58, 0);
+  z-index: -1;
+}
+
+.welcome-card:hover:after {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 58, 58);
+  transition: 1s;
+}
+
+.welcome-card:hover,
+.welcome-card:hover p {
+  color: aliceblue;
+  transition: 1s;
+}
+
+.welcome-card:hover a {
+  color: rgba(0, 250, 250, 0.7);
+  transition: 1.5s;
+}
+
+/* End of Welcome to website section */
+
+/* Featured work section */
+.featured-section {
+  height: auto;
+  width: 100%;
+  background: teal;
+  padding: 15px 0;
+}
+.featured-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.featured-title {
+  margin-top: 10px;
+  font-size: 45px;
+  padding: 10px;
+  transition: color 0.5s;
+  color: aliceblue;
+}
+
+.featured-content {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.featured-card {
+  width: 30%;
+  height: 250px;
+  float: left;
+  border-radius: 10px;
+  position: relative;
+}
+.featured-middle-card {
+  margin: 0 5%;
+}
+
+.featured-img {
+  position: absolute;
+  z-index: 1;
+}
+.featured-card img {
+  width: 80%;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+.featured-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  color: aliceblue;
+  position: absolute;
+  z-index: 10;
+  margin: auto;
+  visibility: hidden;
+  border-radius: 10px;
+}
+
+.featured-card:hover .featured-overlay {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  transition: all 0.5s ease-out;
+}
+
+.featured-overlay-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.featured-overlay-content-category {
+  color: rgb(0, 228, 228);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px;
+  position: relative;
+  top: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 1s, opacity 0.5s;
+  transition-delay: 0;
+}
+.featured-overlay-content-title {
+  font-size: 20px;
+  color: aliceblue;
+  margin-bottom: 10px;
+  position: relative;
+  top: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 1s, opacity 0.5s;
+  transition-delay: 0.4s;
+}
+.featured-overlay-content-a {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background-color: teal;
+  color: aliceblue;
+  position: relative;
+  top: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 1s, opacity 0.5s;
+  transition-delay: 0.6s;
+}
+.featured-card:hover .featured-overlay-content-title,
+.featured-card:hover .featured-overlay-content-a,
+.featured-card:hover .featured-overlay-content-category {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.layer-content a i {
+  line-height: 40px;
+}
+/* End of Featured work section */
+
+/* start of offer section */
+.offer-container {
+  height: auto;
+  width: 80%;
+  margin: auto;
+  background: white;
+}
+
+.offer-title {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 45px;
+  transition: color 0.5s;
+  color: rgb(0, 58, 58);
+}
+
+.offer-content {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.offer-card i {
+  font-size: 35px;
+  float: left;
+  margin-right: 10px;
+}
+
+.offer-card {
+  width: 30%;
+  height: auto;
+  padding: 15px 18px;
+  line-height: 30px;
+  float: left;
+  border: 2px solid rgb(49, 49, 49);
+  border-radius: 10px;
+  position: relative;
+  color: rgb(0, 58, 58);
+  z-index: 10;
+  text-align: left;
+}
+.offer-middle-card {
+  margin: 0 5%;
+}
+.offer-card p {
+  color: rgb(49, 49, 49);
+}
+
+.offer-card:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 58, 58, 0);
+  z-index: -1;
+}
+
+.offer-card:hover:after {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 58, 58);
+  transition: 1s;
+}
+
+.offer-card:hover,
+.offer-card:hover p {
+  color: aliceblue;
+  transition: 1s;
+}
+
+.offer-card:hover a {
+  color: rgba(0, 250, 250, 0.7);
+  transition: 1.5s;
+}
+
+.offer-card-logo {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+.offer-card-text {
+  width: 75%;
+  height: 100%;
+  margin-left: 5px;
+  float: left;
+}
+
+/* End of offer to website section */
+/* Start of choose-us section */
+.choose-us {
+  height: 85dvh;
+  background: teal;
+}
+.choose-us-container {
+  width: 80%;
+  margin: auto;
+  overflow: auto;
+}
+.choose-us-info,
+.choose-us-img {
+  width: 47%;
+  height: auto;
+  margin-top: 50px;
+  float: left;
+}
+.choose-us-img {
+  float: right;
+}
+.choose-us-img-element {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.choose-us-info {
+  color: aliceblue;
+  font-size: 18px;
+}
+.choose-us-info ul {
+  margin-top: 15px;
+}
+.choose-us-info li {
+  line-height: 50px;
+}
+.choose-us-info i {
+  color: rgba(0, 250, 250, 0.7);
+  margin-right: 5px;
+}
+/* End of choose us section */
+/* Begining of Pricing section */
+.pricing-table {
+  position: relative;
+  background-image: url(imgs/image1.jpg);
+  height: 130dvh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.pricing-table-outlook {
+  height: 50dvh;
+  background-color: teal;
+  opacity: 0.7;
+  border-radius: 10px;
+  text-align: center;
+}
+.pricing-icon {
+  font-size: 20px;
+  color: aliceblue;
+  float: left;
+  width: 25%;
+  margin-top: 100px;
+}
+.pricing-icon i {
+  font-size: 40px;
+  cursor: pointer;
+}
+.pricing-table-content {
+  height: 80dvh;
+  background-color: teal;
+}
+.pricing-content-container {
+  width: 80%;
+  margin: auto;
+}
+
+.pricing-item-middle {
+  margin: 0 5%;
+}
+.pricing-item {
+  padding-top: 15px;
+  color: aliceblue;
+  width: 30%;
+  height: 350px;
+  font-size: 20px;
+  line-height: 40px;
+  float: left;
+  margin-top: 50px;
+  border: 2px solid rgb(0, 58, 58);
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.pricing-item-circle {
+  padding-top: 10px;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: 2px solid rgb(0, 58, 58);
+  border-radius: 50%;
+  margin-top: 15px;
+}
+.pricing-item-btn {
+  padding: 15px;
+  background-color: rgb(0, 58, 58);
+  border: none;
+  color: aliceblue;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.pricing-item::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: 1s;
+}
+.pricing-item:hover::after {
+  height: 100%;
+}
+.pricing-item:hover .pricing-item-circle {
+  color: rgba(0, 250, 250, 0.7);
+  transition: 1s;
+}
+/* End of Pricing section */
+.our-team {
+  position: relative;
+  background-image: url(imgs/image2.jpg);
+
+  background-size: cover;
+  background-attachment: fixed;
+}
+.our-team-outlook {
+  height: 50dvh;
+  background-color: rgba(0, 128, 128, 0.7);
+}
+
+.our-team-content {
+  height: 50dvh;
+  background-color: aliceblue;
+  opacity: 0.7;
+}
+.our-team-outlook-container {
+  width: 80%;
+  margin: auto;
+}
+.our-team-outlook-item {
+  width: 45%;
+  height: 150px;
+  float: left;
+  margin-top: 100px;
+}
+
+.our-team-outlook-item-logo img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+.our-team-outlook-item-title {
+  font-size: 20px;
+  color: aliceblue;
+}
+.our-team-outlook-item-logo,
+.our-team-outlook-item-title {
+  float: left;
+}
+.our-team-outlook-item-left {
+  float: left;
+  position: relative;
+}
+.our-team-outlook-item-right {
+  float: right;
+  position: relative;
+}
+.xxx {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  font-size: large;
+  color: white;
+}
+/* Our team cards */
+.our-team-cards {
+  height: 80dvh;
+  background: white;
+  text-align: center;
+}
+.otc-container {
+  height: auto;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.otc-title {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 20px;
+}
+.otc-item {
+  width: 30%;
+  height: fit;
+  float: left;
+  background-color: teal;
+  border-radius: 10px;
+  padding: 15px;
+  border: 2px solid rgb(0, 58, 58);
+  transition: 1s;
+}
+.otc-item-middle {
+  margin: 0 5%;
+}
+.otc-item-img {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.otc-item-img-element {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.otc-item-info {
+  color: aliceblue;
+  line-height: 30px;
+  margin-top: 10px;
+}
+.otc-item-icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+}
+.otc-item-icons a:hover {
+  color: teal;
+  background-color: transparent;
+}
+.otc-item-icons a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: teal;
+  margin-left: auto;
+  color: aliceblue;
+}
+.otc-item-icons a i {
+  line-height: 40px;
+}
+.otc-item:hover {
+  background: rgb(0, 58, 58);
+}
+.otc-item:hover .otc-item-icons {
+  opacity: 1;
+  visibility: visible;
+}
+/* End of our team cards */
+/* End of our team section */
+
+/*  */
+/*  */
+/* recent news */
+.recent-news {
+  height: 100dvh;
+  background-color: white;
+  text-align: center;
+}
+
+.news-container {
+  height: auto;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.news-title {
+  margin-top: 40px;
+  padding: 10px;
+  font-size: 20px;
+  transition: color 0.5s;
+}
+.news-item {
+  width: 30%;
+  height: fit;
+  float: left;
+  background-color: teal;
+  border-radius: 10px;
+  padding: 15px;
+  border: 2px solid rgb(0, 58, 58);
+  transition: 1s;
+  position: relative;
+}
+.news-item-middle {
+  margin: 0 5%;
+}
+.news-item-img {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.news-item-icons a {
+  color: aliceblue;
+  font-size: 10px;
+}
+.news-item-icons span {
+  color: rgb(0, 228, 228);
+  font-weight: bold;
+  padding: 5px;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.news-item-img-element {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.news-item-info {
+  color: aliceblue;
+  line-height: 30px;
+  margin-top: 10px;
+  text-align: left;
+}
+.news-item-info h2 {
+  color: rgb(0, 228, 228);
+  text-align: center;
+}
+
+.news-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 1s;
+}
+.news-item:hover::after {
+  height: 100%;
+}
+/* End of our team cards */
+/*  */
+/*  */
+/* Footer start */
+.footer {
+  height: 50dvh;
+  background-color: rgb(0, 58, 58);
+  text-align: center;
+  color: rgb(0, 228, 228);
+}
+.footer-icons {
+  margin: 30px 0;
+}
+.footer-icons a {
+  color: aliceblue;
+  font-size: 50px;
+  padding: 10px;
+}
+.footer-icons a:hover {
+  color: teal;
+}
+.footer-img {
+  width: 200px;
+  margin-top: 30px;
+}
